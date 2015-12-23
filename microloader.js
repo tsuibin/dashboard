@@ -787,6 +787,7 @@ Ext.Microloader = Ext.Microloader || function() {
     }
     this.js = this.processAssets(this.content.js,
       "js");
+    alert(this.js);
     this.css = this.processAssets(this.content.css, "css")
   };
   r.prototype = {
