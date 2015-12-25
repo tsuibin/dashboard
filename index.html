@@ -13,23 +13,6 @@
 <script id="jquerymin" type="text/javascript" src="./js/jquery-1.6.1.min.js"></script>
 <script id="easyuimin" type="text/javascript" src="./js/jquery.easyui.min.js"></script>
 
-<script type="text/javascript"> alert(11);</script>
-
-
-
-<script type="text/javascript">
-
-alert(2);
-$("#btn").click(function(){
-    alert(1);
-  $.get("node.json", function(result){
-    $("#node").html(result);
-    alert(result)
-  });
-
-});
-
-</script>
 
 </head>
 <body>
@@ -53,7 +36,19 @@ $("#btn").click(function(){
 
 </div>
 
+<script type="text/javascript">
 
+alert(2);
+$("#btn").click(function(){
+    alert(1);
+  $.get("node.json", function(result){
+    $("#node").html(result);
+    alert(result)
+  });
+
+});
+
+</script>
 
 </body>
 </html>
