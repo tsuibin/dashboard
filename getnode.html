@@ -6,7 +6,7 @@
 <script>
 $(document).ready(function(){
   $("button").click(function(){
-    $.getJSON("node.js",function(result){
+    $.getJSON("node.json",function(result){
       $.each(result, function(i, field){
         $("div").append(field + " ");
       });
