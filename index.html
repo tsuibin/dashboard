@@ -26,7 +26,7 @@
 		<div>Expand node to load its children nodes on demand.</div>
 	</div>
 
-	<ul id="tt" class="easyui-tree" url="node.js">
+	<ul id="tt" class="easyui-tree" url="node.json">
 	</ul>
 
 <div id="node" class="easyui-menu" style="width:120px;">
@@ -39,12 +39,11 @@
 <script type="text/javascript">
 
 alert(2);
-alert($("#btn"));
 $("#btn").click(function(){
     alert(1);
   $.get("node.json", function(result){
     $("#node").html(result);
-    alert(result)
+
   });
 
 });
