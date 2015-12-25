@@ -26,8 +26,6 @@
 		<div>Expand node to load its children nodes on demand.</div>
 	</div>
 
-	<<ul id="tt" class="easyui-tree">
-	</ul>
 
 <div id="node" class="easyui-menu" style="width:120px;">
 
@@ -48,12 +46,7 @@ $("#btn").click(function(){
 
 });
 
-  $('#tt').tree({
-        url: "node.json",  
-        loadFilter: function(data){
-            return data;
-        }
-    });
+
 
 </script>
 
