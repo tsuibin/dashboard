@@ -15,9 +15,12 @@
 <script type="text/javascript">
 
 $("button").click(function(){
+    alert(1);
   $.get("node.json", function(result){
     $("#node").html(result);
+    alert(result)
   });
+  
 });
 
 </script>
