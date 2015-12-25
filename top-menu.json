@@ -1,0 +1,17 @@
+[{
+    id: "1",
+        text: "首页"
+
+},{
+    id: "2",
+        text: "username"
+
+},{
+    id: "3",
+        text: "setting"
+
+},{
+    id: "4",
+        text: "登出"
+
+}]
