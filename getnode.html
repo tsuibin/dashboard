@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $.getJSON("node.json",function(result){
+
+      $.each(result, function(i, field){
+
+      $.each(field, function(t, str){
+          $("div").append(str + " ");
+        })
+      });
+    });
+  });
+});
+</script>
+</head>
+
+
+
+<body>
+
+<button>获取 JSON 数据</button>
+<div></div>
+
+</body>
+</html>

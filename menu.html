@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Menu</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    
+
+      
+  </head>
+  <body>
+    <h1>你好，nodes！</h1>
+
+      
+      <div id="nodes" class="btn-group-vertical" role="group" > </div>
+      
+      
+      
+      
+      
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    
+    <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.js"></script>
+    <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        if(!window.jQuery)
+        {
+           var script = document.createElement('script');
+               script.src = "/js/jquery.js";
+               document.body.appendChild(script);
+
+               script = document.createElement('script');
+               script.src = "/js/jquery.min.js";
+               document.body.appendChild(script);
+        }
+
+    </script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+      
+      <script>
+          
+          var nodes = "";
+          function loadNodes() {
+                $.getJSON("node.json", function(data) {
+                $("#nodes").html("");//清空info内容
+                nodes = "";
+                
+               
+                $.each(data.nodes, function(i, item) {
+                    nodes += '<a class="btn btn-default .btn-block " href="#' + item.id + '" role="button">'+ item.text +'</a>';
+                });
+               
+                    $("#nodes").append(nodes);
+                });
+          }
+          
+          loadNodes();
+          
+      </script>
+  </body>
+</html>
