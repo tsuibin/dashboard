@@ -14,16 +14,19 @@
       
   </head>
   <body>
-    <h1>你好，nodes！</h1>
+      
+<h3>输入框</h3>
+    <div class="input-group">
+      <span class="glyphicon glyphicon-user"></span>
+      <input type="text" placeholder="username">
+    </div>
 
+    <div class="input-group">
+      <span class="glyphicon glyphicon-lock"></span>
+      <input type="password" placeholder="password">
+    </div>
       
-      <div id="nodes" class="btn-group-vertical" role="group" > </div>
-      
-      
-      
-      
-      
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     
     <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.js"></script>
     <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
@@ -38,30 +41,13 @@
                script.src = "/js/jquery.min.js";
                document.body.appendChild(script);
         }
-
+        
     </script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
       
-      <script>
-          
-          var nodes = "";
-          function loadNodes() {
-                $.getJSON("node.json", function(data) {
-                $("#nodes").html("");//清空info内容
-                nodes = "";
-                
-               
-                $.each(data.nodes, function(i, item) {
-                    nodes += '<a class="btn btn-default .btn-block " href="#' + item.id + '" role="button">'+ item.text +'</a>';
-                });
-               
-                    $("#nodes").append(nodes);
-                });
-          }
-          
-          loadNodes();
-          
+      <script userCustom="js">
+
       </script>
   </body>
 </html>

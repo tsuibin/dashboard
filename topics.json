@@ -1,54 +1,52 @@
-[{
-        id: "1",
-        title: "帖子的名称",
-        node: "节点",
-        member: "用户名称",
-        time: "12/25/2015 17:32"
-        last: "最后的回复来自"
-        news:"6"
+{"topics":[
+    {
+            "id": "1",
+            "title": " 分享自己写的 OS X 上的一个农历控件",
+            "node": "node",
+            "member": "wangzhe",
+            "time": "12/25/2015 17:32",
+            "last": "last",
+            "news":"6"
 
-}, {
-        id: "2",
-        title: "帖子的名称",
-        node: "节点",
-        member: "用户名称",
-        time: "12/25/2015 17:32"
-        last: "最后的回复来自"
-        news:"6"
-
-}, {
-        id: "3",
-        title: "帖子的名称",
-        node: "节点",
-        member: "用户名称",
-        time: "12/25/2015 17:32"
-        last: "最后的回复来自"
-        news:"6"
-
-}, {
-        id: "4",
-        title: "帖子的名称",
-        node: "节点",
-        member: "用户名称",
-        time: "12/25/2015 17:32"
-        last: "最后的回复来自"
-        news:"6"
-
-}, {
-        id: "5",
-        title: "帖子的名称",
-        node: "节点",
-        member: "用户名称",
-        time: "12/25/2015 17:32"
-        last: "最后的回复来自"
-        news:"6"
-
-},  {
-    id: "6",
-    title: "帖子的名称",
-    node: "节点",
-    member: "用户名称",
-    time: "12/25/2015 17:32"
-    last: "最后的回复来自"
-    news:"6"
-}]
+    },{
+            "id": "1",
+            "title": "三个屌丝做了一个免费轻量级的 bug 管理工具，不知道有没有人用",
+            "node": "node",
+            "member": "tsuibin",
+            "time": "12/25/2015 17:32",
+            "last": "last",
+            "news":"6"
+    },{
+            "id": "1",
+            "title": "老司机发车协议 Old Driver Protocol",
+            "node": "node",
+            "member": "wangzhe",
+            "time": "12/25/2015 17:32",
+            "last": "last",
+            "news":"6"
+    },{
+            "id": "1",
+            "title": "TcpRoute2 tcp 路由器，自动尽可能的优化 tcp 链接。golang 重写的，大体功能完成。",
+            "node": "node",
+            "member": "tsuibin",
+            "time": "12/25/2015 17:32",
+            "last": "last",
+            "news":"6"
+    },{
+            "id": "1",
+            "title": "我在想，既然传销这么火，何不做个平台，让各家传销入驻，平台来给他们拉人。",
+            "node": "node",
+            "member": "wang zhe",
+            "time": "12/25/2015 17:32",
+            "last": "last",
+            "news":"6"
+    },{
+            "id": "1",
+            "title": "有人愿意一起定期的有选择性的翻译 Hacker News 的文章吗？",
+            "node": "node",
+            "member": "tsuibin",
+            "time": "12/25/2015 17:32",
+            "last": "last",
+            "news":"6"
+    }
+]}
