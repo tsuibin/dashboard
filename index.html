@@ -38,7 +38,6 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">
-
             <li><a href="#">Something else here</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="#">Separated link</a></li>
@@ -59,6 +58,8 @@
         </div>
     </div>
       </div>
+
+<div id="result"></div>
       
       
       
@@ -89,8 +90,6 @@
                 $.getJSON("node.json", function(data) {
                 $("#nodes").html("");//清空info内容
                 nodes = "";
-                
-               
                 $.each(data.nodes, function(i, item) {
                     nodes += '<a class="btn btn-default .btn-block " href="#' + item.id + '" role="button">'+ item.text +'</a>';
                 });
@@ -101,26 +100,40 @@
 
 
           var topics = "";
-          var topicStyle=new Array("bg-primary", "bg-success", "bg-info", "bg-warning", "bg-danger");
+          var topicStyle=new Array("bg-success", "bg-info", "bg-warning", "bg-danger"); //"bg-primary"
 
 
-          function loadTopics() {
-                $.getJSON("topics.json", function(topicsData) {
-                $("#topics").html("");//清空info内容
-                nodes = "";
-                
-               
+          function loadTopics(jsonData, divId) {
+                $.getJSON(jsonData, function(topicsData) {
+                $(divId).html("");//清空info内容
+                    topics = "";
                 $.each(topicsData.topics, function(i, item) {
-                    topics += '<p class="' + topicStyle[i%5] +'">' + ' ' +item.id + ' ' +item.title+' <br>' + item.node+ ' ' +item.member+ ' ' +item.time+ ' ' +item.last+ ' ' +item.news +'</p>';
+                    item.title = '<a href="#">' + item.title + '</a>';
+                    topics += '<p class="' + topicStyle[i%5] +'">';
+                    topics += ' ' +item.id;
+                    topics += ' ' +item.title+' <br>';
+                    topics += item.node;
+                    topics += ' ' +item.member;
+                    topics += ' ' +item.time;
+                    topics += ' ' +item.last;
+                    topics += ' ' +item.news;
+                    topics += '</p>';
                 });
                
-                    $("#topics").append(topics);
+                    $(divId).append(topics);
                 });
           }
 
           
           loadNodes();
-          loadTopics();
+          loadTopics("topics.json","#topics");
+
+          var jsData="";
+          $.getJSON("new.json", function(jsData) {
+              $.post("newTopic.html", {jsData}, function (result) {
+                  $("#result").append(result);
+              });
+          });
           
       </script>
   </body>
